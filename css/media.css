@@ -74,11 +74,16 @@
     font-size: 22px;
   }
 
+  .edital-texto h2 br {
+    display: none;
+  }
+
   .btn-edital {
     padding: 15px 40px;
     gap: 10px;
     justify-content: none;
     font-size: 16px;
+    margin-bottom: 30px;
   }
 
   .paciente-section,

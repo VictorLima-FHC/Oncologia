@@ -820,6 +820,7 @@ body {
 
   font-size: 14px;
   transition: .3s;
+  max-width: 440px;
 }
 
 .btn-edital:hover {
