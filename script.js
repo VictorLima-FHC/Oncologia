@@ -80,6 +80,10 @@ prevBtn.addEventListener('click', () => {
     resetAuto();
 });
 
+track.addEventListener('touchstart', () => {
+    resetAuto();
+}, { passive: true });
+
 window.addEventListener('resize', () => {
     track.style.transition = 'none';
     moveCarousel();
