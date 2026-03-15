@@ -3,218 +3,247 @@
     font-size: 38px;
   }
 
-  .paciente-grid,
-  .programas-grid,
-  .associacoes-grid,
-  .edital-grid {
+  .az-prioridades-grid,
+  .lung-grid,
+  .az-future-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
   }
 
-  .paciente-image,
-  .associacoes-image {
-    order: -1;
+  .az-transformacao-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
-  .programas-cards {
-    justify-content: center;
-    flex-wrap: wrap;
+  .az-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .az-grid::after {
+    display: none;
+  }
+
+  .az-box-text,
+  .az-box-highlight {
+    margin-bottom: 30px;
+    margin-top: -5px;
+  }
+
+  .az-left,
+  .az-right {
+    padding: 0;
+  }
+
+  .az-right {
+    border-top: .5px solid #dcdcdc;
+    padding-top: 40px;
+  }
+
+  .az-desafios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .az-future-image img {
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
-
   .hero-background {
     height: auto;
     min-height: 420px;
     padding: 60px 0;
     background-image: url('../assets/bg_mobile.jpg');
-
-    align-items: end;
   }
 
   .hero-content {
     padding: 0 20px;
-    gap: 30px;
+    gap: 20px;
   }
 
   .hero-title {
+    font-size: 32px;
     max-width: 100%;
   }
 
   .hero-description {
+    font-size: 16px;
     max-width: 100%;
+    width: auto;
     line-height: 1.4;
-    width: 300px;
   }
 
-  .info-container,
-  .paciente-container,
-  .programas-container,
-  .associacoes-container,
-  .parceiros-container,
-  .depoimentos-container,
-  .iniciativas-container,
-  .tabs-container,
-  .edital-container,
-  .parceria-container {
+  .az-container,
+  .areas-container,
+  .az-references-container,
+  .lung-containers {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .edital-section {
-    padding: 40px 0;
+  .lung-container {
+    padding: 20px;
   }
 
-  .edital-texto {
-    padding: 0 20px;
+  .az-references-container {
+    padding: 60px 20px;
   }
 
-  .edital-texto h2 {
-    font-size: 22px;
+  .az-future-container,
+  .az-references {
+    padding: 0;
   }
 
-  .edital-texto h2 br {
-    display: none;
-  }
-
-  .btn-edital {
-    padding: 15px 40px;
-    gap: 10px;
-    justify-content: none;
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-
-  .paciente-section,
-  .programas-section,
-  .associacoes-section,
-  .focus-section {
-    padding: 20px 0;
-  }
-
-  .info-astrazeneca {
-    padding: 20px 0;
-  }
-
-  .paciente-titel-mobile {
-    display: flex;
-    font-size: 22px;
-  }
-
-  .paciente-text h2 {
-    display: none;
-  }
-
-  .paciente-text h3 {
-    font-size: 18px;
-  }
-
-  .programas-text h2 {
-    font-size: 22px;
-  }
-
-  .parceiros-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .associacoes-header h2 {
-    font-size: 22px;
-  }
-
-  .parceiros-header h2 {
-    font-size: 22px;
-  }
-
-  .focus-title {
-    font-size: 22px;
-  }
-
-  .parceiro-card {
-    padding: 10px 5px;
-  }
-
-  .card-content h4,
-  .card-content li {
-    font-size: 11px;
-    margin-bottom: 2px;
-  }
-
-  .accordion-content p {
-    font-size: 12px;
-  }
-
-  .accordion {
-    padding: 0px 30px;
-  }
-
-  .parceiro-card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .tabs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tabs-menu {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    gap: 10px;
-    -webkit-overflow-scrolling: n0je;
-  }
-
-
-  .tabs-menu::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .tab-btn {
-    white-space: nowrap;
-    padding: 15px 20px;
-    font-size: 14px;
-  }
-
-  .tab-btn::before {
-    height: 20px;
-  }
-
-  .focus-card {
-    min-width: 280px;
-  }
-
-  .focus-section-container {
-    padding-left: 20px;
-  }
-
-  .iniciativas-card {
-    flex-direction: column;
-    padding: 30px 20px;
-    align-items: center;
-  }
-
-  .iniciativas-texto h2 {
-    font-size: 22px;
+  .az-future-content,
+  .lung-content {
     text-align: left;
   }
 
-  .iniciativas-texto h2 br {
+  .az-oncologia,
+  .az-prioridades,
+  .az-desafios,
+  .az-transformacao,
+  .az-areas,
+  .az-lung {
+    padding: 40px 0;
+  }
+
+  .az-title,
+  .az-prioridades-title,
+  .az-desafios-title,
+  .az-transformacao-title,
+  .areas-title,
+  .lung-content h2,
+  .az-future-content h2,
+  .az-box-text h3 {
+    font-size: 24px;
+  }
+
+  .lung-content h2 {
     display: none;
   }
 
-  .grafico-circular img {
-    max-width: 300px;
-
+  .title-lung-content {
+    display: flex;
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 0px;
   }
 
-  .accordion-header {
-    font-size: 16px;
+  .lung-btn,
+  .az-future-btn {
+    font-size: 18px;
   }
-.accordion-item.active .accordion-content {
-  max-height: 1000px;
-}
+
+  .lung-btn img,
+  .az-future-btn img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .az-prioridades-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .az-prioridades-image {
+    max-width: 250px;
+    margin: 0;
+  }
+
+  .az-desafios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .az-card {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    padding: 30px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .az-card:last-child {
+    border-bottom: none;
+  }
+
+  .az-card p {
+    font-size: 14px;
+  }
+
+  .az-card img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .az-transformacao-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .az-box {
+    min-height: auto;
+  }
+
+  .az-box:nth-child(2) {
+    order: 1;
+  }
+
+  .az-box:nth-child(1) {
+    order: 2;
+  }
+
+  .az-box:nth-child(3) {
+    order: 3;
+  }
+
+  .az-box:nth-child(4) {
+    order: 4;
+  }
+
+  .az-box:nth-child(6) {
+    order: 5;
+  }
+
+  .az-box:nth-child(5) {
+    order: 6;
+  }
+
+  .az-box-text,
+  .az-box-highlight {
+    padding: 40px 20px;
+  }
+
+  .areas-card {
+    min-width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
+  }
+
+  .areas-track {
+    gap: 20px;
+  }
+
+  .lung-grid,
+  .az-future-grid {
+    gap: 30px;
+    text-align: center;
+  }
+
+  .lung-btn,
+  .az-future-btn {
+    padding: 20px 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .az-future-grid {
+    padding: 70px 20px;
+  }
+
+  .az-future-content p {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -222,17 +251,21 @@
     font-size: 28px;
   }
 
-  .programa-card {
-    width: 100%;
-    gap: 20px;
+  .az-title,
+  .az-prioridades-title,
+  .az-desafios-title,
+  .az-transformacao-title,
+  .areas-title,
+  .lung-content h2,
+  .az-future-content h2 {
+    font-size: 22px;
   }
 
-  .programa-btn {
-    width: 80%;
-    padding: 14px 20px;
-  }
-
-  .parceria-container p {
+  .az-box-highlight h3 {
     font-size: 20px;
+  }
+
+  .areas-card {
+    min-width: calc(100vw - 40px);
   }
 }
