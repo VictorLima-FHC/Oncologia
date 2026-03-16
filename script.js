@@ -10,8 +10,6 @@ originalItems.forEach(item => {
 
 let index = 0;
 let isTransitioning = false;
-let autoSlide;
-let resumeTimeout;
 
 function getMoveDistance() {
     const firstCard = track.querySelector('.areas-card');
@@ -52,41 +50,21 @@ function prevSlide() {
         track.style.transition = 'none';
         index = totalOriginal;
         track.style.transform = `translateX(-${index * distance}px)`;
-    }
-
-    setTimeout(() => {
+        
+        setTimeout(() => {
+            index--;
+            moveCarousel();
+        }, 20);
+    } else {
         index--;
         moveCarousel();
-    }, 20);
+    }
 }
 
-function startAutoSlide() {
-    autoSlide = setInterval(nextSlide, 3000);
-}
-
-function resetAuto() {
-    clearInterval(autoSlide);
-    clearTimeout(resumeTimeout);
-    resumeTimeout = setTimeout(startAutoSlide, 10000);
-}
-
-nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAuto();
-});
-
-prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAuto();
-});
-
-track.addEventListener('touchstart', () => {
-    resetAuto();
-}, { passive: true });
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
 
 window.addEventListener('resize', () => {
     track.style.transition = 'none';
     moveCarousel();
 });
-
-startAutoSlide();

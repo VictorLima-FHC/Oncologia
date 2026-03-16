@@ -71,7 +71,7 @@ body {
 .hero-description {
   max-width: 450px;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1;
   font-family: 'Lexia', sans-serif;
   opacity: 0.9;
   font-weight: 100;
